@@ -50,16 +50,14 @@ const Navbar = ({ className }: { className?: string }) => {
           </div>
         </MenuItem>
 
-        <div className="flex flex-col space-y-4 text-sm">
-          <Link href={"/contact"}>
-            {" "}
-            <MenuItem
-              setActive={setActive}
-              active={active}
-              item="Contact Me"
-            ></MenuItem>
-          </Link>
-        </div>
+        <Link href={"/contact"}>
+          {" "}
+          <MenuItem
+            setActive={setActive}
+            active={active}
+            item="Contact Me"
+          ></MenuItem>
+        </Link>
       </Menu>
     </nav>
   );
