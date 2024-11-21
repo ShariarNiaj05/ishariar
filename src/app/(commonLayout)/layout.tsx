@@ -7,7 +7,9 @@ export default function CommonLayout({
 }>) {
   return (
     <>
-      <Navbar />
+      <div className=" mb-36">
+        <Navbar />
+      </div>
       {children}
       footer
       {/* <Footer /> */}
