@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const HeroSection = () => {
   return (
     <div className="h-auto md:h-[40rem] w-full rounded-md flex flex-col items-center justify-center relative overflow-hidden mx-auto py-10 md:py-0">
@@ -7,7 +9,10 @@ const HeroSection = () => {
           Seamless Solutions, Visionary Execution: Full-Stack Prowess with a
           Visionary Perspective
         </p>
-        <div className="mt-4">button</div>
+        <div className="mt-4">
+          <Link href={"/"}>Github</Link>
+          <Link href={"/"}>Resume</Link>
+        </div>
       </div>
     </div>
   );
