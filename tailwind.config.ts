@@ -9,6 +9,8 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      animation: { spotlight: "spotlight 2s ease .75s 1 forwards" },
+      keyframes: {},
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
