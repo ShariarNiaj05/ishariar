@@ -7,6 +7,7 @@ const HeroSection = () => {
           Seamless Solutions, Visionary Execution: Full-Stack Prowess with a
           Visionary Perspective
         </p>
+        <div className="mt-4">button</div>
       </div>
     </div>
   );
