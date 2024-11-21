@@ -1,5 +1,9 @@
 const HeroSection = () => {
-  return <div>HeroSection HeroSection</div>;
+  return (
+    <div className="h-auto md:h-[40rem] w-full rounded-md flex">
+      HeroSection HeroSection
+    </div>
+  );
 };
 
 export default HeroSection;
