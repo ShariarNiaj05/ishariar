@@ -49,19 +49,17 @@ const Navbar = ({ className }: { className?: string }) => {
             />
           </div>
         </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Pricing">
-          {/*  <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/hobby">Hobby</HoveredLink>
-            <HoveredLink href="/individual">Individual</HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
-            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
-          </div> */}
-          {
-            <div className="flex flex-col space-y-4 text-sm">
-              <Link href={"/contact"}>Contact</Link>
-            </div>
-          }
-        </MenuItem>
+
+        <div className="flex flex-col space-y-4 text-sm">
+          <Link href={"/contact"}>
+            {" "}
+            <MenuItem
+              setActive={setActive}
+              active={active}
+              item="Contact Me"
+            ></MenuItem>
+          </Link>
+        </div>
       </Menu>
     </nav>
   );
