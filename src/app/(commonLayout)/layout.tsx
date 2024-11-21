@@ -13,7 +13,9 @@ export default function CommonLayout({
   return (
     <div>
       {/* <NavBar /> */}
+      navbar
       {children}
+      footer
       {/* <Footer /> */}
     </div>
   );
