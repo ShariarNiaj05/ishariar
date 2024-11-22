@@ -26,7 +26,6 @@ const HeroSection = () => {
               <PrimaryButton>Github</PrimaryButton>
             </Link>
             <Link href={"/"}>
-              {" "}
               <SecondaryButton>Resume</SecondaryButton>{" "}
             </Link>
           </div>
