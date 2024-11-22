@@ -23,7 +23,7 @@ const HeroSection = () => {
             <Link href={"/"}>
               <Button
                 borderRadius="1.75rem"
-                className="bg-white dark:bg-secondary text-black dark:text-white border-neutral-200 dark:border-background"
+                className="bg-white dark:bg-secondary text-black dark:text-white font-bold border-neutral-200 dark:border-background"
               >
                 Github
               </Button>
@@ -32,7 +32,7 @@ const HeroSection = () => {
               {" "}
               <Button
                 borderRadius="1.75rem"
-                className="bg-white dark:bg-secondary text-black dark:text-white border-neutral-200 dark:border-background"
+                className="bg-white dark:bg-primary text-black dark:text-black font-bold border-neutral-200 dark:border-secondary"
               >
                 Resume
               </Button>
