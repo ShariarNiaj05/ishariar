@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Spotlight } from "./ui/Spotlight";
 import { Button } from "./ui/moving-border";
 import PrimaryButton from "./buttons/PrimaryButton";
+import SecondaryButton from "./buttons/SecondaryButton";
 
 const HeroSection = () => {
   return (
@@ -26,12 +27,7 @@ const HeroSection = () => {
             </Link>
             <Link href={"/"}>
               {" "}
-              <Button
-                borderRadius="1.75rem"
-                className="bg-white dark:bg-primary text-black dark:text-black font-bold border-neutral-200 dark:border-secondary"
-              >
-                Resume
-              </Button>
+              <SecondaryButton>Resume</SecondaryButton>{" "}
             </Link>
           </div>
         </div>
