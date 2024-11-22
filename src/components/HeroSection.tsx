@@ -22,12 +22,6 @@ const HeroSection = () => {
           </p>
           <div className="mt-4">
             <Link href={"/"}>
-              {/* <Button
-                borderRadius="1.75rem"
-                className="bg-white dark:bg-secondary text-black dark:text-white font-bold border-neutral-200 dark:border-background"
-              >
-                Github
-              </Button> */}
               <PrimaryButton>Github</PrimaryButton>
             </Link>
             <Link href={"/"}>
