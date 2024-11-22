@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Spotlight } from "./ui/Spotlight";
+import { Button } from "./ui/moving-border";
 
 const HeroSection = () => {
   return (
@@ -19,7 +20,14 @@ const HeroSection = () => {
             Visionary Perspective
           </p>
           <div className="mt-4">
-            <Link href={"/"}>Github</Link>
+            <Link href={"/"}>
+              <Button
+                borderRadius="1.75rem"
+                className="bg-white dark:bg-secondary text-black dark:text-white border-neutral-200 dark:border-background"
+              >
+                Github
+              </Button>
+            </Link>
             <Link href={"/"}>Resume</Link>
           </div>
         </div>
