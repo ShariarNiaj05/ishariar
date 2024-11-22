@@ -28,7 +28,15 @@ const HeroSection = () => {
                 Github
               </Button>
             </Link>
-            <Link href={"/"}>Resume</Link>
+            <Link href={"/"}>
+              {" "}
+              <Button
+                borderRadius="1.75rem"
+                className="bg-white dark:bg-secondary text-black dark:text-white border-neutral-200 dark:border-background"
+              >
+                Resume
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
