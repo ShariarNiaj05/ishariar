@@ -7,12 +7,8 @@ export default function CommonLayout({
 }>) {
   return (
     <>
-      <div className="mb-36 relative w-full flex items-center">
-        <Navbar />
-      </div>
+      <div className="mb-36 relative w-full flex items-center">Sidebar</div>
       {children}
-      footer
-      {/* <Footer /> */}
     </>
   );
 }
