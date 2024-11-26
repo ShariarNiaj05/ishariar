@@ -1,7 +1,32 @@
 import Image from "next/image";
 import { Timeline } from "./ui/timeline";
+import { useEffect, useState } from "react";
 
 const ExperienceSection = () => {
+  const [experiences, setExperiences] = useState<>([]);
+  const [loading, setLoading] = useState(true);
+
+  const fetchExperiences = async () => {
+    try {
+      const response = await fetch("/api/experiences", {
+        cache: "no-cache",
+      });
+      const data = await response.json();
+      setExperiences(data);
+      setLoading(false);
+    } catch (error) {
+      console.error("Failed to fetch experiences", error);
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchExperiences();
+  }, []);
+
+  if (loading) {
+    return <p>Loading experiences...</p>;
+  }
   const data = [
     {
       title: "2024",
