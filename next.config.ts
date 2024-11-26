@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  env: {
+    server: process.env.SERVER_URL,
+  },
 };
 
 export default nextConfig;
