@@ -1,12 +1,11 @@
 import Image from "next/image";
 import { Timeline } from "./ui/timeline";
-import { useEffect, useState } from "react";
+// import { useEffect, } from "react";
 import { fetchExperiences } from "@/APIs/getExperience";
 
-const ExperienceSection = () => {
-  const [experiences, setExperiences] = useState([]);
-  const [loading, setLoading] = useState(true);
-
+const ExperienceSection = async () => {
+  const experiences = await fetchExperiences();
+  console.log(experiences);
   //   const fetchExperiences = async () => {
   //     try {
   //       const response = await fetch(
@@ -25,15 +24,15 @@ const ExperienceSection = () => {
   //     }
   //   };
 
-  useEffect(() => {
-    const experienceData = fetchExperiences();
-    setExperiences(experienceData);
-    setLoading(false);
-  }, []);
-
-  if (loading) {
-    return <p>Loading experiences...</p>;
-  }
+  //   useEffect(() => {
+  //     const experienceData = fetchExperiences();
+  //     setExperiences(experienceData);
+  //     setLoading(false);
+  //   }, []);
+  //   console.log(experiences);
+  //   if (loading) {
+  //     return <p>Loading experiences...</p>;
+  //   }
   //   const data = [
   //     {
   //       title: "2024",
