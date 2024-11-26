@@ -33,7 +33,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         text: "#f5eaec",
-        primary: "#c2a7ae",
+        primary: "#D2D4D5",
         secondary: "#287080",
         accent: "#287080",
       },
