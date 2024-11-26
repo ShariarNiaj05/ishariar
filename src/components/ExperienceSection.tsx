@@ -1,32 +1,34 @@
-"use client";
 import Image from "next/image";
 import { Timeline } from "./ui/timeline";
 import { useEffect, useState } from "react";
+import { fetchExperiences } from "@/APIs/getExperience";
 
 const ExperienceSection = () => {
   const [experiences, setExperiences] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchExperiences = async () => {
-    try {
-      const response = await fetch(
-        `https://ishariar-server.vercel.app/api/v1/experiences`,
-        {
-          cache: "no-cache",
-        }
-      );
-      const data = await response.json();
-      console.log("data", data);
-      setExperiences(data);
-      setLoading(false);
-    } catch (error) {
-      console.error("Failed to fetch experiences", error);
-      setLoading(false);
-    }
-  };
+  //   const fetchExperiences = async () => {
+  //     try {
+  //       const response = await fetch(
+  //         `https://ishariar-server.vercel.app/api/v1/experiences`,
+  //         {
+  //           cache: "no-cache",
+  //         }
+  //       );
+  //       const data = await response.json();
+  //       console.log("data", data);
+  //       setExperiences(data);
+  //       setLoading(false);
+  //     } catch (error) {
+  //       console.error("Failed to fetch experiences", error);
+  //       setLoading(false);
+  //     }
+  //   };
 
   useEffect(() => {
-    fetchExperiences();
+    const experienceData = fetchExperiences();
+    setExperiences(experienceData);
+    setLoading(false);
   }, []);
 
   if (loading) {
