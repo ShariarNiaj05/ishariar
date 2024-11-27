@@ -10,7 +10,7 @@ export const StickyScroll = ({
 }: {
   content: {
     title: string;
-    description: string;
+    description?: string;
     content?: React.ReactNode | any;
   }[];
   contentClassName?: string;
