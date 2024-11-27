@@ -30,14 +30,11 @@ const ExperienceSection = async () => {
 
         {/* Responsibilities */}
         <div className="mb-8">
-          {/* <h4 className="font-semibold text-sm text-neutral-800 dark:text-neutral-200 mb-2">
-            Key Initiatives
-          </h4> */}
           <H4Title>Responsibilities</H4Title>
           {item.responsibilities?.map((responsibility, index) => (
             <div
               key={index}
-              className="text-start flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm"
+              className="text-start flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm mt-1"
             >
               ✅ {responsibility}
             </div>
@@ -61,14 +58,12 @@ const ExperienceSection = async () => {
         {/* Key Initiatives */}
         {item.keyInitiatives && (
           <div className="mt-6">
-            <h4 className="font-semibold text-sm text-neutral-800 dark:text-neutral-200 mb-2">
-              Key Initiatives
-            </h4>
-            <ul className="list-disc pl-4">
+            <H4Title> Key Initiatives</H4Title>
+            <ul className="text-start list-disc pl-4 ">
               {item.keyInitiatives.map((initiative, index) => (
                 <li
                   key={index}
-                  className="text-xs md:text-sm text-neutral-700 dark:text-neutral-300"
+                  className="text-xs md:text-sm text-neutral-700 dark:text-neutral-300 mt-1"
                 >
                   {initiative}
                 </li>
