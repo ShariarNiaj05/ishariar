@@ -7,6 +7,7 @@ const HomePage = () => {
       <h1 className="text-2xl text-center">
         <HeroSection />
         <ExperienceSection />
+        <SkillsSection />
       </h1>
     </main>
   );
