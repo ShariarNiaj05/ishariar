@@ -3,6 +3,7 @@ import { Timeline } from "./ui/timeline";
 // import { useEffect, } from "react";
 import { fetchExperiences } from "@/APIs/getExperience";
 import { formatDate } from "@/utils/formatDate";
+import H3Title from "./Titles/H3Title";
 
 const ExperienceSection = async () => {
   const experiences = await fetchExperiences();
@@ -13,9 +14,13 @@ const ExperienceSection = async () => {
     content: (
       <div>
         {/* Job Title and Company */}
-        <h3 className="text-start text-xl font-semibold text-secondary dark:text-primary mb-2">
+        {/* <h3 className="text-start text-xl font-semibold text-secondary dark:text-primary mb-2">
           {item.title} at {item.company}
-        </h3>
+        </h3> */}
+        <H3Title>
+          {" "}
+          {item.title} at {item.company}{" "}
+        </H3Title>
 
         {/* Description */}
         <p className="text-start text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
