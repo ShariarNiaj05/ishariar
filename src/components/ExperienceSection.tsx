@@ -4,6 +4,7 @@ import { Timeline } from "./ui/timeline";
 import { fetchExperiences } from "@/APIs/getExperience";
 import { formatDate } from "@/utils/formatDate";
 import H3Title from "./Titles/H3Title";
+import H4Title from "./Titles/H4Title";
 
 const ExperienceSection = async () => {
   const experiences = await fetchExperiences();
@@ -29,9 +30,10 @@ const ExperienceSection = async () => {
 
         {/* Responsibilities */}
         <div className="mb-8">
-          <h4 className="font-semibold text-sm text-neutral-800 dark:text-neutral-200 mb-2">
+          {/* <h4 className="font-semibold text-sm text-neutral-800 dark:text-neutral-200 mb-2">
             Key Initiatives
-          </h4>
+          </h4> */}
+          <H4Title>Responsibilities</H4Title>
           {item.responsibilities?.map((responsibility, index) => (
             <div
               key={index}
