@@ -4,12 +4,12 @@ import { fetchExperiences } from "@/APIs/getExperience";
 import H3Title from "./Titles/H3Title";
 import H4Title from "./Titles/H4Title";
 import { getDateRange } from "@/utils/getDateRange";
-import { Experience } from "@/types";
+import { Experience, TimelineEntry } from "@/types";
 
-const ExperienceSection = async () => {
-  const experiences = await fetchExperiences();
+const ExperienceSection = async (): Promise<JSX.Element> => {
+  const experiences: Experience[] = await fetchExperiences();
 
-  const experiencesTimeline: Experience[] = experiences?.map(
+  const experiencesTimeline: TimelineEntry[] = experiences?.map(
     (item: Experience) => ({
       title: getDateRange(item.startDate, item.endDate),
       content: (
