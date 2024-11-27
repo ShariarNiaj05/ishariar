@@ -1,4 +1,4 @@
-export const fetchExperiences = async () => {
+export const fetchSkills = async () => {
   try {
     const response = await fetch(
       `https://ishariar-server.vercel.app/api/v1/skills`,
