@@ -32,7 +32,6 @@ export const Timeline = ({ experiences }: { experiences: TimelineEntry[] }) => {
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
-  console.log("experiences experiences", experiences);
   return (
     <div
       className="w-full bg-white dark:bg-background font-sans md:px-10"
