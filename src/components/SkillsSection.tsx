@@ -5,41 +5,28 @@ import Image from "next/image";
 const SkillsSection = async () => {
   const allSkills = await fetchSkills();
   console.log(allSkills);
-  const content = [
-    {
-      title: "Real time changes",
-      //   description:
-      //     "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
-      content: (
-        <div className="h-full w-full  flex items-center justify-center text-white">
+  const content = allSkills.map((skill) => ({
+    title: skill.name, // Set the skill name as the title
+    content: (
+      <div className="h-full w-2xl flex flex-col items-center justify-center text-white">
+        {/* Skill Category */}
+        <p className="mb-4 text-lg font-medium text-neutral-800 dark:text-neutral-200">
+          {skill.category}
+        </p>
+        {/* Skill Media */}
+        {skill.media?.map((mediaItem) => (
           <Image
-            src="/linear.webp"
+            key={mediaItem._id}
+            src={mediaItem.url}
             width={300}
             height={300}
-            className="h-full w-full object-cover"
-            alt="linear board demo"
+            className="h-32 w-32 object-fit"
+            alt={skill.name}
           />
-        </div>
-      ),
-    },
-
-    {
-      title: "Real time changes",
-      //   description:
-      //     "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
-      content: (
-        <div className="h-full w-full  flex items-center justify-center text-white">
-          <Image
-            src="/linear.webp"
-            width={300}
-            height={300}
-            className="h-full w-full object-cover"
-            alt="linear board demo"
-          />
-        </div>
-      ),
-    },
-  ];
+        ))}
+      </div>
+    ),
+  }));
   return (
     <section>
       {" "}
