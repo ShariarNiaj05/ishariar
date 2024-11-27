@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Timeline } from "./ui/timeline";
-// import { useEffect, } from "react";
 import { fetchExperiences } from "@/APIs/getExperience";
 import H3Title from "./Titles/H3Title";
 import H4Title from "./Titles/H4Title";
@@ -9,11 +8,10 @@ import { Experience } from "@/types";
 
 const ExperienceSection = async () => {
   const experiences = await fetchExperiences();
-  console.log("experiences", experiences);
 
   const experiencesTimeline: Experience[] = experiences?.map(
     (item: Experience) => ({
-      title: getDateRange(item.startDate, item.endDate), // Dynamically set title if available, otherwise fallback
+      title: getDateRange(item.startDate, item.endDate),
       content: (
         <div>
           {/* Job Title and Company */}
