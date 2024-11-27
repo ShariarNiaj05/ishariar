@@ -13,21 +13,24 @@ const ExperienceSection = async () => {
     content: (
       <div>
         {/* Job Title and Company */}
-        <h3 className="text-sm font-semibold text-neutral-800 dark:text-neutral-200 mb-2">
+        <h3 className="text-start text-xl font-semibold text-secondary dark:text-primary mb-2">
           {item.title} at {item.company}
         </h3>
 
         {/* Description */}
-        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+        <p className="text-start text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
           {item.description}
         </p>
 
         {/* Responsibilities */}
         <div className="mb-8">
+          <h4 className="font-semibold text-sm text-neutral-800 dark:text-neutral-200 mb-2">
+            Key Initiatives
+          </h4>
           {item.responsibilities?.map((responsibility, index) => (
             <div
               key={index}
-              className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm"
+              className="text-start flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm"
             >
               ✅ {responsibility}
             </div>
