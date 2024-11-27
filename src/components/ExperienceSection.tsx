@@ -16,9 +16,6 @@ const ExperienceSection = async () => {
     content: (
       <div>
         {/* Job Title and Company */}
-        {/* <h3 className="text-start text-xl font-semibold text-secondary dark:text-primary mb-2">
-          {item.title} at {item.company}
-        </h3> */}
         <H3Title>
           {" "}
           {item.title} at {item.company}{" "}
