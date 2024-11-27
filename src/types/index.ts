@@ -19,11 +19,6 @@ export type Experience = {
   updatedAt: string;
 };
 
-type TimelineItem = {
-  title: string;
-  content: JSX.Element;
-};
-
 export interface TimelineEntry {
   title: string;
   content: JSX.Element;
