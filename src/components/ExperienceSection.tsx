@@ -2,15 +2,21 @@ import Image from "next/image";
 import { Timeline } from "./ui/timeline";
 // import { useEffect, } from "react";
 import { fetchExperiences } from "@/APIs/getExperience";
+import { formatDate } from "@/utils/formatDate";
 
 const ExperienceSection = async () => {
   const experiences = await fetchExperiences();
   console.log("experiences", experiences);
 
   const experiencesTimeline = experiences?.map((item) => ({
-    title: item.startDate, // Dynamically set title if available, otherwise fallback
+    title: formatDate(item.startDate), // Dynamically set title if available, otherwise fallback
     content: (
       <div>
+        {/* Job Title and Company */}
+        <h3 className="text-sm font-semibold text-neutral-800 dark:text-neutral-200 mb-2">
+          {item.title} at {item.company}
+        </h3>
+
         {/* Description */}
         <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
           {item.description}
