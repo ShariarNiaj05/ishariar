@@ -2,27 +2,30 @@ import { fetchSkills } from "@/APIs/getSKills";
 import H2Titles from "./Titles/H2Titles";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 import Image from "next/image";
+import { Skills } from "@/types";
 const SkillsSection = async () => {
   const allSkills = await fetchSkills();
 
   const languageSkills = allSkills.filter(
-    (skill) => skill.category === "Language"
+    (skill: Skills) => skill.category === "Language"
   );
   const backendSkills = allSkills.filter(
-    (skill) => skill.category === "Backend"
+    (skill: Skills) => skill.category === "Backend"
   );
   const frontendSkills = allSkills.filter(
-    (skill) => skill.category === "Frontend"
+    (skill: Skills) => skill.category === "Frontend"
   );
-  const apiSkills = allSkills.filter((skill) => skill.category === "APIs");
+  const apiSkills = allSkills.filter(
+    (skill: Skills) => skill.category === "APIs"
+  );
 
   const interpersonalSkills = allSkills.filter(
-    (skill) => skill.category === "Interpersonal"
+    (skill: Skills) => skill.category === "Interpersonal"
   );
 
   console.log("languageSkills", languageSkills);
 
-  const content = allSkills.map((skill) => ({
+  const content = allSkills.map((skill: Skills) => ({
     title: skill.name, // Set the skill name as the title
     content: (
       <div className="h-full w-2xl flex flex-col items-center justify-center text-white">

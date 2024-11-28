@@ -30,6 +30,7 @@ export type Skills = {
   category: string;
   media: [
     {
+      _id: string;
       url: string;
       key: string;
     }
