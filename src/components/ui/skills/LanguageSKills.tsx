@@ -1,12 +1,17 @@
-import { fetchSkills } from "@/APIs/getSKills";
+import { fetchSkills, SkillsResponse } from "@/APIs/getSKills";
 import { Skills } from "@/types";
 import Image from "next/image";
 import { StickyScroll } from "../sticky-scroll-reveal";
 import H3Title from "@/components/Titles/H3Title";
 
 const LanguageSKills = async () => {
-  const { languageSkills } = await fetchSkills();
-  console.log("languageSkills", languageSkills);
+  const skillsResponse: SkillsResponse | undefined = await fetchSkills();
+
+  if (!skillsResponse) {
+    return <p>Failed to load skills. Please try again later.</p>;
+  }
+  const { languageSkills } = skillsResponse;
+
   const content =
     Array.isArray(languageSkills) && languageSkills.length > 0
       ? languageSkills.map((skill: Skills) => ({
