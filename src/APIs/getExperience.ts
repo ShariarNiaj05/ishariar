@@ -3,7 +3,7 @@ export const fetchExperiences = async () => {
     const response = await fetch(
       `https://ishariar-server.vercel.app/api/v1/experiences`,
       {
-        cache: "no-cache",
+        cache: "no-store",
       }
     );
     const data = await response.json();
