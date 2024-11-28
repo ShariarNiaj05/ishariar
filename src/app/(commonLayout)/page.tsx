@@ -1,6 +1,6 @@
 import ExperienceSection from "@/components/ExperienceSection";
 import HeroSection from "@/components/HeroSection";
-import SkillsSection from "@/components/ui/skills/SkillsSection";
+import SkillsSection from "@/components/SkillsSection";
 
 const HomePage = () => {
   return (
