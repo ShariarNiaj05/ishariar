@@ -1,5 +1,6 @@
 import H2Titles from "./Titles/H2Titles";
 import BackendSkills from "./ui/skills/BackendSkills";
+import FrontendSkills from "./ui/skills/FrontendSkills";
 import LanguageSKills from "./ui/skills/LanguageSKills";
 const SkillsSection = async () => {
   return (
@@ -9,6 +10,7 @@ const SkillsSection = async () => {
       {/* frontendSkills */}
       <LanguageSKills />
       <BackendSkills />
+      <FrontendSkills />
     </section>
   );
 };
