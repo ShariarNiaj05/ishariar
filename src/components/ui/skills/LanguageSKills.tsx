@@ -5,7 +5,7 @@ import { StickyScroll } from "../sticky-scroll-reveal";
 import H3Title from "@/components/Titles/H3Title";
 
 const LanguageSKills = async () => {
-  const { languageSkills } = await fetchSkills();
+  const languageSkills: Skills[] = await fetchSkills();
   const content =
     Array.isArray(languageSkills) &&
     languageSkills.map((skill: Skills) => ({
