@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
     ],
   },
   env: {
-    serverUrl: process.env.SERVER_URL,
+    serverUrl: process.env.NEXT_SERVER_URL,
   },
 };
 
