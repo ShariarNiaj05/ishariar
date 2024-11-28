@@ -23,3 +23,18 @@ export interface TimelineEntry {
   title: string;
   content: JSX.Element;
 }
+
+export type Skills = {
+  _id: string;
+  name: string;
+  category: string;
+  media: [
+    {
+      url: string;
+      key: string;
+    }
+  ];
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+};

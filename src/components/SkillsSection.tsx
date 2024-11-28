@@ -15,6 +15,7 @@ const SkillsSection = async () => {
     (skill) => skill.category === "Frontend"
   );
   const apiSkills = allSkills.filter((skill) => skill.category === "APIs");
+
   const interpersonalSkills = allSkills.filter(
     (skill) => skill.category === "Interpersonal"
   );
