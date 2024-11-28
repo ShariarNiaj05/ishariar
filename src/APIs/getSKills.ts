@@ -9,11 +9,9 @@ export const fetchSkills = async () => {
       }
     );
     const { data } = await response.json();
-    console.log("data of skills", data);
     const languageSkills = data.filter(
       (skill: Skills) => skill.category === "Language"
     );
-    console.log("data of languageSkills", languageSkills);
     const backendSkills = data.filter(
       (skill: Skills) => skill.category === "Backend"
     );

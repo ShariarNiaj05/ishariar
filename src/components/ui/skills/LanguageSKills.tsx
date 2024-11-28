@@ -4,6 +4,7 @@ import Image from "next/image";
 
 const LanguageSKills = async () => {
   const { languageSkills } = await fetchSkills();
+  console.log("languageSkills", languageSkills);
   const content = languageSkills.map((skill: Skills) => ({
     title: skill.name, // Set the skill name as the title
     content: (
