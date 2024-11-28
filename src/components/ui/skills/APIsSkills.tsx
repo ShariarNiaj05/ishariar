@@ -7,7 +7,12 @@ import { fetchSkills, SkillsResponse } from "@/APIs/getSKills";
 const APIsSkills = async () => {
   const skillsResponse: SkillsResponse | undefined = await fetchSkills();
 
-  if (!skillsResponse) {
+  if (
+    !skillsResponse ||
+    !skillsResponse.apiSkills ||
+    skillsResponse.languageSkills.length === 0 ||
+    undefined
+  ) {
     return <p>Failed to load skills. Please try again later.</p>;
   }
   const { apiSkills } = skillsResponse;
