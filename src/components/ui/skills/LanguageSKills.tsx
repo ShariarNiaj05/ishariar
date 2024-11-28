@@ -1,10 +1,11 @@
 import { fetchSkills } from "@/APIs/getSKills";
 import { Skills } from "@/types";
 import Image from "next/image";
+import { StickyScroll } from "../sticky-scroll-reveal";
+import H3Title from "@/components/Titles/H3Title";
 
 const LanguageSKills = async () => {
-  const { languageSkills }: { languageSkills: Skills } = await fetchSkills();
-  console.log("languageSkills", languageSkills);
+  const { languageSkills } = await fetchSkills();
   const content =
     Array.isArray(languageSkills) &&
     languageSkills.map((skill: Skills) => ({
@@ -30,7 +31,12 @@ const LanguageSKills = async () => {
       ),
     }));
 
-  return <div></div>;
+  return (
+    <div className="p-10">
+      <H3Title>Language</H3Title>
+      <StickyScroll content={content} />
+    </div>
+  );
 };
 
 export default LanguageSKills;

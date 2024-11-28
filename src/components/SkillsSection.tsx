@@ -27,7 +27,7 @@ const SkillsSection = async () => {
   // console.log("languageSkills", languageSkills);
 
   return (
-    <section>
+    <section className="max-w-7xl mx-auto">
       {" "}
       <H2Titles>Web Development and Other Skills</H2Titles>
       {/* frontendSkills */}

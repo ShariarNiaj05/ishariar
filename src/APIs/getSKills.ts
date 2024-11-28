@@ -9,18 +9,20 @@ export const fetchSkills = async () => {
       }
     );
     const { data } = await response.json();
-    const languageSkills = data.filter(
+    const languageSkills: Skills[] = data.filter(
       (skill: Skills) => skill.category === "Language"
     );
-    const backendSkills = data.filter(
+    const backendSkills: Skills[] = data.filter(
       (skill: Skills) => skill.category === "Backend"
     );
-    const frontendSkills = data.filter(
+    const frontendSkills: Skills[] = data.filter(
       (skill: Skills) => skill.category === "Frontend"
     );
-    const apiSkills = data.filter((skill: Skills) => skill.category === "APIs");
+    const apiSkills: Skills[] = data.filter(
+      (skill: Skills) => skill.category === "APIs"
+    );
 
-    const interpersonalSkills = data.filter(
+    const interpersonalSkills: Skills[] = data.filter(
       (skill: Skills) => skill.category === "Interpersonal"
     );
     return {
