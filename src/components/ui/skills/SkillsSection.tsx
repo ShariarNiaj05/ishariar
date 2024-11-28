@@ -1,6 +1,6 @@
 import { fetchSkills } from "@/APIs/getSKills";
-import H2Titles from "./Titles/H2Titles";
-import { StickyScroll } from "./ui/sticky-scroll-reveal";
+import H2Titles from "../../Titles/H2Titles";
+import { StickyScroll } from "../sticky-scroll-reveal";
 import Image from "next/image";
 import { Skills } from "@/types";
 const SkillsSection = async () => {
