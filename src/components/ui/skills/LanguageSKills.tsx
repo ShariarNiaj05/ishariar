@@ -8,29 +8,30 @@ const LanguageSKills = async () => {
   const { languageSkills } = await fetchSkills();
   console.log("languageSkills", languageSkills);
   const content =
-    Array.isArray(languageSkills) &&
-    languageSkills.map((skill: Skills) => ({
-      title: skill.name, // Set the skill name as the title
-      content: (
-        <div className="h-full w-2xl flex flex-col items-center justify-center text-white">
-          {/* Skill Category */}
-          <p className="mb-4 text-lg font-medium text-neutral-800 dark:text-neutral-200">
-            {skill.category}
-          </p>
-          {/* Skill Media */}
-          {skill.media?.map((mediaItem) => (
-            <Image
-              key={mediaItem._id}
-              src={mediaItem.url}
-              width={300}
-              height={300}
-              className="h-32 w-32 object-fit"
-              alt={skill.name}
-            />
-          ))}
-        </div>
-      ),
-    }));
+    Array.isArray(languageSkills) && languageSkills.length > 0
+      ? languageSkills.map((skill: Skills) => ({
+          title: skill.name, // Set the skill name as the title
+          content: (
+            <div className="h-full w-2xl flex flex-col items-center justify-center text-white">
+              {/* Skill Category */}
+              <p className="mb-4 text-lg font-medium text-neutral-800 dark:text-neutral-200">
+                {skill.category}
+              </p>
+              {/* Skill Media */}
+              {skill.media?.map((mediaItem) => (
+                <Image
+                  key={mediaItem._id}
+                  src={mediaItem.url}
+                  width={300}
+                  height={300}
+                  className="h-32 w-32 object-fit"
+                  alt={skill.name}
+                />
+              ))}
+            </div>
+          ),
+        }))
+      : [];
 
   return (
     <div className="p-10">

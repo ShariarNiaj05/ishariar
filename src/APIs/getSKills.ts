@@ -1,6 +1,12 @@
 import { Skills } from "@/types";
-
-export const fetchSkills = async () => {
+export interface SkillsResponse {
+  languageSkills: Skills[];
+  backendSkills: Skills[];
+  frontendSkills: Skills[];
+  apiSkills: Skills[];
+  interpersonalSkills: Skills[];
+}
+export const fetchSkills = async (): Promise<SkillsResponse> => {
   try {
     const response = await fetch(
       `https://ishariar-server.vercel.app/api/v1/skills`,
@@ -8,7 +14,7 @@ export const fetchSkills = async () => {
         cache: "no-cache",
       }
     );
-    const { data } = await response.json();
+    const { data }: { data: Skills[] } = await response.json();
     const languageSkills: Skills[] = data.filter(
       (skill: Skills) => skill.category === "Language"
     );
@@ -31,7 +37,7 @@ export const fetchSkills = async () => {
       frontendSkills,
       apiSkills,
       interpersonalSkills,
-    };
+    } as SkillsResponse;
   } catch (error) {
     console.error("Failed to fetch skills", error);
   }
