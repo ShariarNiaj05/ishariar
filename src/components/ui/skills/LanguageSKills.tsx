@@ -1,8 +1,10 @@
+import { fetchSkills } from "@/APIs/getSKills";
 import { Skills } from "@/types";
 import Image from "next/image";
 
-const LanguageSKills = () => {
-  const content = allSkills.map((skill: Skills) => ({
+const LanguageSKills = async () => {
+  const { languageSkills } = await fetchSkills();
+  const content = languageSkills.map((skill: Skills) => ({
     title: skill.name, // Set the skill name as the title
     content: (
       <div className="h-full w-2xl flex flex-col items-center justify-center text-white">

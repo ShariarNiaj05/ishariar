@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Skills } from "@/types";
 import LanguageSKills from "./ui/skills/LanguageSKills";
 const SkillsSection = async () => {
-  const allSkills = await fetchSkills();
+  // const allSkills = await fetchSkills();
 
   // const languageSkills = allSkills.filter(
   //   (skill: Skills) => skill.category === "Language"
