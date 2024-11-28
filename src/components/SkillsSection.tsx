@@ -4,7 +4,23 @@ import { StickyScroll } from "./ui/sticky-scroll-reveal";
 import Image from "next/image";
 const SkillsSection = async () => {
   const allSkills = await fetchSkills();
-  console.log(allSkills);
+
+  const languageSkills = allSkills.filter(
+    (skill) => skill.category === "Language"
+  );
+  const backendSkills = allSkills.filter(
+    (skill) => skill.category === "Backend"
+  );
+  const frontendSkills = allSkills.filter(
+    (skill) => skill.category === "Frontend"
+  );
+  const apiSkills = allSkills.filter((skill) => skill.category === "APIs");
+  const interpersonalSkills = allSkills.filter(
+    (skill) => skill.category === "Interpersonal"
+  );
+
+  console.log("languageSkills", languageSkills);
+
   const content = allSkills.map((skill) => ({
     title: skill.name, // Set the skill name as the title
     content: (
