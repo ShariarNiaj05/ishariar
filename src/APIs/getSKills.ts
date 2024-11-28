@@ -12,7 +12,6 @@ export const fetchSkills = async (): Promise<SkillsResponse | undefined> => {
       `https://ishariar-server.vercel.app/api/v1/skills`,
       {
         cache: "no-store",
-        next: { revalidate: 60 },
       }
     );
     const { data }: { data: Skills[] } = await response.json();
