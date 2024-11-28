@@ -10,11 +10,11 @@ const BackendSkills = async () => {
   if (!skillsResponse) {
     return <p>Failed to load skills. Please try again later.</p>;
   }
-  const { languageSkills } = skillsResponse;
+  const { backendSkills } = skillsResponse;
 
   const content =
-    Array.isArray(languageSkills) && languageSkills.length > 0
-      ? languageSkills.map((skill: Skills) => ({
+    Array.isArray(backendSkills) && backendSkills.length > 0
+      ? backendSkills.map((skill: Skills) => ({
           title: skill.name, // Set the skill name as the title
           content: (
             <div className="h-full w-2xl flex flex-col items-center justify-center text-white">
