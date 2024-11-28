@@ -23,7 +23,13 @@ export const fetchSkills = async () => {
     const interpersonalSkills = data.filter(
       (skill: Skills) => skill.category === "Interpersonal"
     );
-    return data?.data;
+    return {
+      languageSkills,
+      backendSkills,
+      frontendSkills,
+      apiSkills,
+      interpersonalSkills,
+    };
   } catch (error) {
     console.error("Failed to fetch skills", error);
   }
