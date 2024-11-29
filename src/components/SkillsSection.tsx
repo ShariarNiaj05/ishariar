@@ -8,7 +8,6 @@ const SkillsSection = async () => {
     <section className="max-w-7xl mx-auto">
       {" "}
       <H2Titles>Web Development and Other Skills</H2Titles>
-      {/* frontendSkills */}
       <LanguageSKills />
       <BackendSkills />
       <FrontendSkills />
