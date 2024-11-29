@@ -15,8 +15,9 @@ export const fetchSkills = async (): Promise<SkillsResponse | undefined> => {
       }
     );
     const { data }: { data: Skills[] } = await response.json();
+    console.log(response);
 
-    if (!response.ok) {
+    if (!response.ok || !data) {
       console.error("Failed to fetch skills: ", response.statusText);
       return undefined;
     }
