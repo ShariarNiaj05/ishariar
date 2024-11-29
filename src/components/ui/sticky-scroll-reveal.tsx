@@ -60,7 +60,9 @@ export const StickyScroll = ({
   useEffect(() => {
     setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
   }, [activeCard, linearGradients]);
-
+  if (content === undefined) {
+    return "There is no skills to show";
+  }
   return (
     <motion.div
       animate={{
