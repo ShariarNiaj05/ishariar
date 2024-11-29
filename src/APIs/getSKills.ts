@@ -9,10 +9,7 @@ export interface SkillsResponse {
 export const fetchSkills = async (): Promise<SkillsResponse | undefined> => {
   try {
     const response = await fetch(
-      `https://ishariar-server.vercel.app/api/v1/skills`,
-      {
-        cache: "no-store",
-      }
+      `https://ishariar-server.vercel.app/api/v1/skills`
     );
     const { data }: { data: Skills[] } = await response.json();
     console.log(response);
