@@ -6,7 +6,7 @@ export interface SkillsResponse {
   apiSkills: Skills[];
   interpersonalSkills: Skills[];
 }
-export const fetchSkills = async (): Promise<SkillsResponse | undefined> => {
+export const fetchSkills = async () => {
   try {
     const response = await fetch(
       `https://ishariar-server.vercel.app/api/v1/skills`
@@ -16,7 +16,7 @@ export const fetchSkills = async (): Promise<SkillsResponse | undefined> => {
 
     if (!response.ok || !data) {
       console.error("Failed to fetch skills: ", response.statusText);
-      return undefined;
+      return "Failed to fetch skills: ";
     }
 
     const languageSkills: Skills[] = data.filter(

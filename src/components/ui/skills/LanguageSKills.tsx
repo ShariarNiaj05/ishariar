@@ -5,7 +5,7 @@ import { StickyScroll } from "../sticky-scroll-reveal";
 import H3Title from "@/components/Titles/H3Title";
 
 const LanguageSKills = async () => {
-  const skillsResponse: SkillsResponse | undefined = await fetchSkills();
+  const skillsResponse: SkillsResponse = await fetchSkills();
 
   if (!skillsResponse) {
     return <p>Failed to load skills. Please try again later.</p>;
