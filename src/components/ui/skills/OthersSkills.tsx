@@ -40,7 +40,7 @@ const OthersSkills = async () => {
       : [];
   return (
     <div className="p-10">
-      <H3Title>Backend</H3Title>
+      <H3Title>Others</H3Title>
       <StickyScroll content={content} />
     </div>
   );
