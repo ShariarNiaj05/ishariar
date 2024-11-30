@@ -8,13 +8,13 @@ const APIsSkills = async () => {
   const skillsResponse: SkillsResponse | string | undefined =
     await fetchSkills();
 
-  if (!skillsResponse || undefined) {
+  if (!skillsResponse) {
     return <p>Failed to load skills. Please try again later.</p>;
   }
   const { apiSkills } = skillsResponse as SkillsResponse;
 
   const content =
-    Array.isArray(APIsSkills) && apiSkills.length > 0
+    Array.isArray(apiSkills) && apiSkills.length > 0
       ? apiSkills.map((skill: Skills) => ({
           title: skill.name, // Set the skill name as the title
           content: (
