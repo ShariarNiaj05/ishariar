@@ -37,6 +37,9 @@ export const fetchSkills = async (): Promise<
     const toolsSkills: Skills[] = data.filter(
       (skill: Skills) => skill.category === "Tools"
     );
+    const othersSkills: Skills[] = data.filter(
+      (skill: Skills) => skill.category === "Tools"
+    );
 
     const interpersonalSkills: Skills[] = data.filter(
       (skill: Skills) => skill.category === "Interpersonal"
@@ -47,6 +50,7 @@ export const fetchSkills = async (): Promise<
       frontendSkills,
       apiSkills,
       toolsSkills,
+      othersSkills,
       interpersonalSkills,
     } as SkillsResponse;
   } catch (error) {
