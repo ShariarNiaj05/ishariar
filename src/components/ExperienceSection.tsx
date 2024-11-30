@@ -74,8 +74,6 @@ const ExperienceSection = async (): Promise<JSX.Element> => {
     })
   );
 
-  console.log(experiencesTimeline);
-
   return (
     <div className="w-full">
       <Timeline experiences={experiencesTimeline} />

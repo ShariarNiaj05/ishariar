@@ -14,7 +14,6 @@ export const fetchSkills = async (): Promise<
       `https://ishariar-server.vercel.app/api/v1/skills`
     );
     const { data }: { data: Skills[] } = await response.json();
-    console.log(response);
 
     if (!response.ok || !data) {
       console.error("Failed to fetch skills: ", response.statusText);
