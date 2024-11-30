@@ -32,7 +32,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="relative z-10 w-full text-center">
+      <div className="relative z-10 w-1/2 text-center mx-auto">
         <Link target="_blank" href={"https://app.daily.dev/shariarislam"}>
           <Image
             src="https://api.daily.dev/devcards/v2/VzIq43FTtucx4ciSOg2qa.png?type=wide&r=rhq"
