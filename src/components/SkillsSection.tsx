@@ -3,6 +3,7 @@ import APIsSkills from "./ui/skills/APIsSkills";
 import BackendSkills from "./ui/skills/BackendSkills";
 import FrontendSkills from "./ui/skills/FrontendSkills";
 import LanguageSKills from "./ui/skills/LanguageSKills";
+import OthersSkills from "./ui/skills/OthersSkills";
 import ToolsSkills from "./ui/skills/ToolsSkills";
 const SkillsSection = async () => {
   return (
@@ -14,6 +15,7 @@ const SkillsSection = async () => {
       <FrontendSkills />
       <APIsSkills />
       <ToolsSkills />
+      <OthersSkills />
     </section>
   );
 };
