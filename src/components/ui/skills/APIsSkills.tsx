@@ -5,17 +5,13 @@ import { Skills } from "@/types";
 import { fetchSkills, SkillsResponse } from "@/APIs/getSKills";
 
 const APIsSkills = async () => {
-  const skillsResponse: SkillsResponse | undefined = await fetchSkills();
+  const skillsResponse: SkillsResponse | string | undefined =
+    await fetchSkills();
 
-  if (
-    !skillsResponse ||
-    !skillsResponse.apiSkills ||
-    skillsResponse.languageSkills.length === 0 ||
-    undefined
-  ) {
+  if (!skillsResponse || undefined) {
     return <p>Failed to load skills. Please try again later.</p>;
   }
-  const { apiSkills } = skillsResponse;
+  const { apiSkills } = skillsResponse as SkillsResponse;
 
   const content =
     Array.isArray(APIsSkills) && apiSkills.length > 0

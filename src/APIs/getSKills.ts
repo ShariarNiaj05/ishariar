@@ -6,7 +6,9 @@ export interface SkillsResponse {
   apiSkills: Skills[];
   interpersonalSkills: Skills[];
 }
-export const fetchSkills = async () => {
+export const fetchSkills = async (): Promise<
+  SkillsResponse | string | undefined
+> => {
   try {
     const response = await fetch(
       `https://ishariar-server.vercel.app/api/v1/skills`

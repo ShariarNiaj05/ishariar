@@ -1,5 +1,5 @@
 import H2Titles from "./Titles/H2Titles";
-import APIsSkills from "./ui/skills/APIsSkills";
+// import APIsSkills from "./ui/skills/APIsSkills";
 import BackendSkills from "./ui/skills/BackendSkills";
 import FrontendSkills from "./ui/skills/FrontendSkills";
 import LanguageSKills from "./ui/skills/LanguageSKills";
@@ -11,7 +11,7 @@ const SkillsSection = async () => {
       <LanguageSKills />
       <BackendSkills />
       <FrontendSkills />
-      <APIsSkills />
+      {/* <APIsSkills /> */}
     </section>
   );
 };

@@ -5,12 +5,13 @@ import { Skills } from "@/types";
 import { fetchSkills, SkillsResponse } from "@/APIs/getSKills";
 
 const BackendSkills = async () => {
-  const skillsResponse: SkillsResponse | undefined = await fetchSkills();
+  const skillsResponse: SkillsResponse | string | undefined =
+    await fetchSkills();
 
   if (!skillsResponse) {
     return <p>Failed to load skills. Please try again later.</p>;
   }
-  const { backendSkills } = skillsResponse;
+  const { backendSkills } = skillsResponse as SkillsResponse;
 
   const content =
     Array.isArray(backendSkills) && backendSkills.length > 0
