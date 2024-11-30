@@ -5,17 +5,17 @@ import { Skills } from "@/types";
 import { fetchSkills, SkillsResponse } from "@/APIs/getSKills";
 
 const ToolsSkills = async () => {
-  const skillsResponse: SkillsResponse | string | undefined =
+  const toolsResponse: SkillsResponse | string | undefined =
     await fetchSkills();
 
-  if (!skillsResponse) {
+  if (!toolsResponse) {
     return <p>Failed to load skills. Please try again later.</p>;
   }
-  const { backendSkills } = skillsResponse as SkillsResponse;
+  const { toolsSkills } = toolsResponse as SkillsResponse;
 
   const content =
-    Array.isArray(backendSkills) && backendSkills.length > 0
-      ? backendSkills.map((skill: Skills) => ({
+    Array.isArray(toolsSkills) && toolsSkills.length > 0
+      ? toolsSkills.map((skill: Skills) => ({
           title: skill.name, // Set the skill name as the title
           content: (
             <div className="h-full w-2xl flex flex-col items-center justify-center text-white">
