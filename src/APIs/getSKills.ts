@@ -5,6 +5,7 @@ export interface SkillsResponse {
   frontendSkills: Skills[];
   apiSkills: Skills[];
   toolsSkills: Skills[];
+  othersSkills: Skills[];
   interpersonalSkills: Skills[];
 }
 export const fetchSkills = async (): Promise<
