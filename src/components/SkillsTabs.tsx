@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Tabs } from "./ui/tabs";
 import LanguageSKills from "./ui/skills/LanguageSKills";
+import TabsContent from "./TabsContent";
 
 export const SkillsTabs = async () => {
   const tabs = [
@@ -12,7 +13,8 @@ export const SkillsTabs = async () => {
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Language</p>
-          <LanguageSKills />
+          <TabsContent />
+          {/* <LanguageSKills /> */}
           {/* <FrontendSkills /> */}
           {/* <DummyContent /> */}
           {/* {content} */}
