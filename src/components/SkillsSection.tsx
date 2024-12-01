@@ -1,3 +1,4 @@
+import SkillsTabs from "./SkillsTabs";
 import H2Titles from "./Titles/H2Titles";
 import APIsSkills from "./ui/skills/APIsSkills";
 import BackendSkills from "./ui/skills/BackendSkills";
@@ -11,6 +12,7 @@ const SkillsSection = async () => {
     <section className="max-w-7xl mx-auto">
       {" "}
       <H2Titles>Web Development and Other Skills</H2Titles>
+      <SkillsTabs />
       <LanguageSKills />
       <BackendSkills />
       <FrontendSkills />
