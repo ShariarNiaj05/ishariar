@@ -4,8 +4,15 @@ import Image from "next/image";
 import { Tabs } from "./ui/tabs";
 import LanguageSKills from "./ui/skills/LanguageSKills";
 import TabsContent from "./TabsContent";
+import { fetchSkills, SkillsResponse } from "@/APIs/getSKills";
 
 export const SkillsTabs = async () => {
+  const skillsResponse: SkillsResponse | string | undefined =
+    await fetchSkills();
+  console.log(skillsResponse);
+  if (!skillsResponse) {
+    return <p>Failed to load skills. Please try again later.</p>;
+  }
   const tabs = [
     {
       title: "Language",
