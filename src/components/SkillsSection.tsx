@@ -13,13 +13,13 @@ const SkillsSection = async () => {
       {" "}
       <H2Titles>Web Development and Other Skills</H2Titles>
       <SkillsTabs />
-      <LanguageSKills />
-      <BackendSkills />
-      <FrontendSkills />
-      <APIsSkills />
-      <ToolsSkills />
-      <OthersSkills />
-      <InterpersonalSkills />
+      {/* <LanguageSKills /> */}
+      {/* <BackendSkills /> */}
+      {/* <FrontendSkills /> */}
+      {/* <APIsSkills /> */}
+      {/* <ToolsSkills /> */}
+      {/* <OthersSkills /> */}
+      {/* <InterpersonalSkills /> */}
     </section>
   );
 };
