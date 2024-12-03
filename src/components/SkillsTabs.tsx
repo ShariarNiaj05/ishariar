@@ -10,9 +10,9 @@ export const SkillsTabs = async () => {
   const skillsResponse: SkillsResponse | string | undefined =
     await fetchSkills();
   // console.log(skillsResponse);
-  // if (!skillsResponse) {
-  //   return <p>Failed to load skills. Please try again later.</p>;
-  // }
+  if (!skillsResponse) {
+    return <p>Failed to load skills. Please try again later.</p>;
+  }
   const tabs = [
     {
       title: "Language",
