@@ -9,10 +9,10 @@ import { fetchSkills, SkillsResponse } from "@/APIs/getSKills";
 export const SkillsTabs = async () => {
   const skillsResponse: SkillsResponse | string | undefined =
     await fetchSkills();
-  console.log(skillsResponse);
-  if (!skillsResponse) {
-    return <p>Failed to load skills. Please try again later.</p>;
-  }
+  // console.log(skillsResponse);
+  // if (!skillsResponse) {
+  //   return <p>Failed to load skills. Please try again later.</p>;
+  // }
   const tabs = [
     {
       title: "Language",
@@ -20,8 +20,8 @@ export const SkillsTabs = async () => {
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Language</p>
-          <TabsContent />
-          <LanguageSKills />
+          {/* <TabsContent /> */}
+          {/* <LanguageSKills /> */}
           {/* <FrontendSkills /> */}
           {/* <DummyContent /> */}
           {/* {content} */}
