@@ -32,8 +32,8 @@ export const SkillsTabs = async () => {
           <p>Language</p>
           {languageSkills?.map((skill) => (
             <Image
-              key={skill.url}
-              src={skill.url}
+              key={skill.media.url}
+              src={skill.media.url}
               alt="dummy image"
               width="1000"
               height="1000"
