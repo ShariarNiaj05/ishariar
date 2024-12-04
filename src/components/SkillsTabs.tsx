@@ -33,7 +33,9 @@ export const SkillsTabs = async () => {
           {languageSkills?.map((skill) => (
             <Image
               key={skill.media.url}
-              src={skill.media.url}
+              src={
+                "https://pub-a8040a6a50834307af8def5deea3ce22.r2.dev/skills/skills/1732720682067_Steve-Zondicons-Location.512.png"
+              }
               alt="dummy image"
               width="500"
               height="500"
