@@ -13,6 +13,16 @@ export const SkillsTabs = async () => {
   if (!skillsResponse) {
     return <p>Failed to load skills. Please try again later.</p>;
   }
+  const {
+    languageSkills,
+    backendSkills,
+    frontendSkills,
+    apiSkills,
+    toolsSkills,
+    othersSkills,
+    interpersonalSkills,
+  } = skillsResponse;
+  // console.log("tabs skillsResponse", skillsResponse);
   const tabs = [
     {
       title: "Language",
@@ -20,11 +30,16 @@ export const SkillsTabs = async () => {
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Language</p>
-          {/* <TabsContent /> */}
-          {/* <LanguageSKills /> */}
-          {/* <FrontendSkills /> */}
-          {/* <DummyContent /> */}
-          {/* {content} */}
+          {languageSkills?.map((skill) => (
+            <Image
+              key={skill.url}
+              src={skill.url}
+              alt="dummy image"
+              width="1000"
+              height="1000"
+              className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
+            />
+          ))}
         </div>
       ),
     },
